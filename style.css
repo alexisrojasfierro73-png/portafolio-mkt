@@ -1,0 +1,159 @@
+/* ==========================================================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Permite calcular bordes y paddings dentro del elemento */
+}
+
+body {
+    font-family: 'Outfit', 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    /* Color de fondo de la página */
+
+    /* ESTRUCTURA DE CENTRADO (FLEXBOX) */
+    display: flex;
+    justify-content: center;
+    /* Centra la tarjeta horizontalmente */
+    align-items: center;
+    /* Centra la tarjeta verticalmente */
+
+    min-height: 100vh;
+    /* Fuerza al body a ocupar todo el alto de la pantalla */
+    padding: 20px;
+    /* Colchón de seguridad para móviles */
+}
+
+/* ==========================================================================
+   2. CONTENEDOR CENTRAL RESPONSIVO (CARD)
+   ========================================================================== */
+.card {
+    background-color: #ffffff;
+
+    /* RESPONSIVIDAD */
+    width: 100%;
+    /* Ocupa el ancho disponible */
+    max-width: 450px;
+    /* Límite de ancho ideal para tarjetas */
+
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Sombra suave para dar profundidad */
+    padding: 30px;
+    text-align: center;
+    /* Centra los textos por defecto */
+}
+
+/* ==========================================================================
+   3. ELEMENTOS INTERNOS DE LA TARJETA
+   ========================================================================== */
+
+/* Menú de navegación */
+.card-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    /* Alineado a la derecha */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card-nav a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 3px;
+    transition: color 0.2s ease;
+}
+
+.card-nav a:hover {
+    color: #0066cc;
+}
+
+/* Indicador de página activa */
+.card-nav a.active {
+    color: #0066cc;
+    border-bottom: 2px solid #0066cc;
+}
+
+/* Contenedor y Foto de Avatar */
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    /* Centrado horizontal */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e2e8f0;
+    /* Fondo base por si la imagen tarda en cargar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Textos de Presentación */
+.card-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0066cc;
+}
+
+/* Línea decorativa corta */
+.card-divider {
+    border: none;
+    height: 3px;
+    background-color: #e2e8f0;
+    width: 60px;
+    margin: 18px auto;
+    /* Centrada vertical y horizontalmente */
+    border-radius: 2px;
+}
+
+/* Párrafo de Biografía */
+.card-bio {
+    font-size: 0.9rem;
+    color: #4a5568;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+/* Botones de Redes Sociales */
+.card-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-social {
+    text-decoration: none;
+    color: #0066cc;
+    border: 2px solid #0066cc;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+    transform: translateY(-2px);
+    /* Efecto sutil de elevación */
+}
